@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Detalle❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="razones.css">
+</head>
+
+<body>
+
+<!-- CORAZONES -->
+<div class="corazones"></div>
+
+<div class="paper">
+
+<header class="top">
+<span>EDICIÓN ESPECIAL</span>
+<span></span>
+<span>FEBRERO 2026</span>
+</header>
+
+<h1>5 Razones<br><span>por las que eres</span><br>
+<i>Mi elección perfecta</i></h1>
+
+<div class="grid">
+<div class="box">1<br>Tienes la sonrisa más linda del universo.</div>
+<div class="box">2<br>Contigo, cualquier día se siente especial.</div>
+<div class="box">3<br>Haces que mi corazón lata más rápido cada vez que te pienso o te veo.</div>
+<div class="box">4<br>Eres mi persona favorita para compartir momentos.</div>
+<div class="box">5<br>No imagino a nadie más a mi lado en este San Valentín o en mis dias.</div>
+</div>
+
+<h2>Señales de que debes decir “Sí”</h2>
+
+<div class="signals">
+<div>Si estás leyendo esto, el destino nos ha unido.</div>
+<div>Si sonreíste al menos una vez, es una señal.</div>
+<div>Si te gusto, igual es una señal.</div>
+</div>
+
+<button onclick="siguiente()">Continuar</button>
+
+</div>
+
+<script>
+function siguiente(){
+  window.location.href = "pregunta.html";
+}
+</script>
+
+<!-- SCRIPT CORAZONES -->
+<script>
+const contenedor = document.querySelector('.corazones');
+
+function crearCorazon(){
+    const corazon = document.createElement('span');
+
+    corazon.style.left = Math.random() * 100 + 'vw';
+    corazon.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    corazon.style.width = corazon.style.height = (Math.random() * 15 + 10) + 'px';
+
+    contenedor.appendChild(corazon);
+
+    setTimeout(() => {
+        corazon.remove();
+    }, 10000);
+}
+
+setInterval(crearCorazon, 400);
+</script>
+
+</body>
+</html>

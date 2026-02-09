@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Confirmado</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------------- FONDO ---------------- */
+body{
+margin:0;
+min-height:100vh;
+background:linear-gradient(#e63946,#f77f7f);
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:'Playfair Display',serif;
+color:white;
+text-align:center;
+overflow:hidden;
+position:relative;
+}
+
+/* ---------------- CONTENEDOR ---------------- */
+.container{
+max-width:700px;
+padding:30px;
+z-index:2;
+}
+
+h1{
+font-size:30px;
+margin-bottom:20px;
+}
+
+/* ---------------- CORAZÓN CENTRAL ---------------- */
+.heart{
+background:white;
+color:#e63946;
+padding:25px;
+border-radius:50%;
+width:240px;
+height:240px;
+margin:20px auto;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+animation: latido 1.5s infinite;
+}
+
+.heart span{
+font-family:'Great Vibes',cursive;
+font-size:34px;
+}
+
+/* Animación latido */
+@keyframes latido{
+0%{ transform:scale(1); }
+50%{ transform:scale(1.08); }
+100%{ transform:scale(1); }
+}
+
+/* ---------------- TEXTO FINAL ---------------- */
+.footer{
+margin-top:30px;
+font-size:22px;
+line-height:1.6;
+}
+
+/* ---------------- CORAZONES FLOTANTES ---------------- */
+
+.corazones{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.corazones span{
+position:absolute;
+display:block;
+width:18px;
+height:18px;
+background:#ffd1dc;
+transform:rotate(45deg);
+animation: flotar 12s linear infinite;
+opacity:0.6;
+}
+
+/* forma del corazón */
+.corazones span::before,
+.corazones span::after{
+content:'';
+position:absolute;
+width:18px;
+height:18px;
+background:#ffd1dc;
+border-radius:50%;
+}
+
+.corazones span::before{
+top:-9px;
+left:0;
+}
+
+.corazones span::after{
+left:-9px;
+top:0;
+}
+
+/* animación */
+@keyframes flotar{
+0%{
+transform:translateY(100vh) rotate(45deg);
+opacity:0;
+}
+50%{opacity:.7;}
+100%{
+transform:translateY(-10vh) rotate(45deg);
+opacity:0;
+}
+}
+
+/* posiciones diferentes */
+.corazones span:nth-child(1){ left:5%; animation-duration:11s; }
+.corazones span:nth-child(2){ left:15%; animation-duration:14s; }
+.corazones span:nth-child(3){ left:25%; animation-duration:10s; }
+.corazones span:nth-child(4){ left:35%; animation-duration:13s; }
+.corazones span:nth-child(5){ left:50%; animation-duration:9s; }
+.corazones span:nth-child(6){ left:65%; animation-duration:12s; }
+.corazones span:nth-child(7){ left:75%; animation-duration:10s; }
+.corazones span:nth-child(8){ left:85%; animation-duration:15s; }
+.corazones span:nth-child(9){ left:95%; animation-duration:11s; }
+
+/* ---------------- CELULAR ---------------- */
+@media (max-width:600px){
+
+h1{
+font-size:22px;
+}
+
+.heart{
+width:200px;
+height:200px;
+padding:20px;
+}
+
+.heart span{
+font-size:28px;
+}
+
+.footer{
+font-size:15px;
+padding:0 10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- corazones -->
+<div class="corazones">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="container">
+<h1>Confirmado oficialmente:</h1>
+
+<div class="heart">
+<span>Eres mi</span>
+<span>San Valentín</span>
+</div>
+
+<div class="footer">
+Gracias por decir que sí 💖<br>
+Prepárate para momentos inolvidables,<br>
+sonrisas inevitables<br>
+y recuerdos que se quedarán siempre con nosotros.
+</div>
+</div>
+
+</body>
+</html>

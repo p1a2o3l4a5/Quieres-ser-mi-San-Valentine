@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="valentine.css">
+</head>
+<body>
+    <div class="corazones"></div>
+
+<div class="paper">
+
+    <header class="top">
+        <span>EDICIÓN ESPECIAL</span>
+        <span></span>
+        <span>FEBRERO 2026</span>
+    </header
+
+    <h1 class="title">
+        
+    </h1>
+
+    <div class="sub">
+        <span>14/FEBRERO/2026</span>
+        <span></span>
+        <span>TE AMO</span>
+    </div>
+
+    <h2 class="question">
+        SERAS MI <br>
+        <span>SAN VALENTIN?</span> 
+    </h2>
+
+    <p class="distribution">
+        DISTRIBUCIÓN: <br>
+        EXCLUSIVA PARA LA PERSONA MÁS ESPECIAL <br>
+        <strong></strong>
+    </p>
+
+    <section class="content">
+        <div class="text">
+            <h3>Nuestra Historia</h3>
+            <p>
+                Desde que llegaste a mi vida, algo en mí cambió.
+Sin darme cuenta te fuiste volviendo mi persona favorita,
+mi tranquilidad en los días difíciles y mi sonrisa en los días normales.
+                <br><br>
+                No sé exactamente en qué momento pasó, pero hoy tengo claro
+                que quiero seguir creando recuerdos contigo,
+                reírnos por tonterías, contarnos todo
+                y acompañarnos en cada meta y cada sueño.
+            </p>
+            <p>
+                Este 14 de febrero no solo quiero celebrarlo,
+                quiero vivirlo contigo…
+                porque si es a tu lado, cualquier día se vuelve especial.
+                </p>
+                <br><br>
+        </div>
+
+        <div class="image">
+            <!-- Aquí irá su foto -->
+            <img src="foto.jpg.jpeg" alt="Nosotros">
+            <div class="overlay">
+                ¿Aceptas la misión de ser mi San Valentín?
+            </div>
+        </div>
+    </section>
+
+   <section class="coupons">
+
+    <a class="coupon"
+       href="https://wa.me/?text=Amor%2C%20quiero%20canjear%20mi%20cup%C3%B3n%20%F0%9F%92%98"
+       target="_blank">
+        <span>CUPÓN PARA:</span>
+        <strong>Conocer algun lugar</strong>
+        <small>Toca para canjear</small>
+    </a>
+
+    <a class="coupon"
+       href="https://wa.me/?text=Amor%2C%20quiero%20canjear%20mi%20cup%C3%B3n%20%F0%9F%92%98"
+       target="_blank">
+        <span>CUPÓN PARA:</span>
+        <strong>Una cena </strong>
+        <small>Toca para canjear</small>
+    </a>
+
+</section>
+
+
+    <footer class="footer">
+        
+    </footer>
+    
+
+</div>
+<script>
+function siguiente(){
+  window.location.href = "pregunta.html";
+}
+</script>
+
+
+
+
+<script>
+function irARazones(){
+    window.location.href = "razones.html";
+}
+</script>
+
+<script>
+    const contenedor = document.querySelector('.corazones');
+    
+    function crearCorazon(){
+        const corazon = document.createElement('span');
+    
+        corazon.style.left = Math.random() * 100 + 'vw';
+        corazon.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        corazon.style.width = corazon.style.height = (Math.random() * 15 + 10) + 'px';
+    
+        contenedor.appendChild(corazon);
+    
+        setTimeout(() => {
+            corazon.remove();
+        }, 10000);
+    }
+    
+    setInterval(crearCorazon, 400);
+    </script>
+
+</div> <!-- cierre de .paper -->
+
+<div class="final-boton">
+    <button class="btn-siguiente" onclick="irARazones()">
+        Continuar 💌
+    </button>
+</div>
+
+
+
+</body>
+    
+</html>
