@@ -1,0 +1,148 @@
+
+body{
+    background: radial-gradient(circle,#ffe3ea,#f6b8c7);
+    font-family:'Playfair Display',serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:15px;
+    position:relative;
+    overflow-x:hidden;
+    }
+    
+    /* carta */
+    .paper{
+    max-width:700px;
+    width:100%;
+    background:rgba(255,255,255,.75);
+    border:2px solid #e63946;
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    position:relative;
+    z-index:1;
+    }
+    
+    h1{
+    color:#c1121f;
+    font-size:30px;
+    }
+    
+    h2{
+    font-size:28px;
+    margin:20px 0;
+    }
+    
+    h2 span{
+    font-family:'Great Vibes',cursive;
+    font-size:46px;
+    color:#e63946;
+    }
+    
+    /* botones */
+    .buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:25px;
+    flex-wrap:wrap;
+    }
+    
+    button{
+    padding:14px 28px;
+    border:2px solid #e63946;
+    background:white;
+    color:#e63946;
+    font-size:16px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:0.25s;
+    min-width:140px;
+    }
+    
+    /* SI */
+    #btnSi{
+    background:#e63946;
+    color:white;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    }
+    
+    /* NO */
+    #btnNo{
+    background:white;
+    color:#e63946;
+    }
+    
+    button:active{
+    transform:scale(0.92);
+    }
+    
+    /* mensaje */
+    #mensajeNo{
+    color:#c1121f;
+    display:none;
+    margin-top:15px;
+    font-size:15px;
+    }
+    
+    /* corazones flotantes */
+    .hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+    }
+    
+    .heart{
+    position:absolute;
+    color:#ff4d6d;
+    animation:flotar 8s linear infinite;
+    opacity:.7;
+    }
+    
+    @keyframes flotar{
+    0%{
+    transform:translateY(100vh) scale(0.6);
+    opacity:0;
+    }
+    20%{opacity:0.8;}
+    100%{
+    transform:translateY(-10vh) scale(1.2);
+    opacity:0;
+    }
+    }
+    
+    /* 📱 ajuste celular */
+    @media(max-width:500px){
+    
+    h1{
+    font-size:24px;
+    }
+    
+    h2{
+    font-size:22px;
+    }
+    
+    h2 span{
+    font-size:38px;
+    }
+    
+    button{
+    width:100%;
+    max-width:260px;
+    font-size:15px;
+    padding:12px 20px;
+    }
+    
+    .paper{
+    padding:20px;
+    }
+    
+    }
+        

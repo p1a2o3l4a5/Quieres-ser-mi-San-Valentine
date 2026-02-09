@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorpresa 💌</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuente elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Corazones de fondo -->
+<div class="corazones"></div>
+
+<div class="container">
+    <div class="envelope">
+
+        <div class="letter">
+            <p>
+                Te tengo una sorpresa.<br><br>
+                Para descubrirla<br>
+                da click sobre el corazón
+            </p>
+        </div>
+
+        <div class="heart" onclick="openSurprise()">❤️</div>
+
+        <div class="footer">
+            <span>De: <strong>Pao</strong></span>
+            <span>Para: <strong>José</strong></span>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function openSurprise(){
+    window.location.href = "valentine.html";
+}
+</script>
+
+<!-- Script corazones -->
+<script>
+const contenedor = document.querySelector('.corazones');
+
+function crearCorazon(){
+    const corazon = document.createElement('span');
+
+    corazon.style.left = Math.random() * 100 + 'vw';
+    corazon.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    corazon.style.width = corazon.style.height = (Math.random() * 15 + 10) + 'px';
+
+    contenedor.appendChild(corazon);
+
+    setTimeout(() => {
+        corazon.remove();
+    }, 10000);
+}
+
+setInterval(crearCorazon, 400);
+</script>
+
+</body>
+</html>
+

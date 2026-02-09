@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Detalle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pregunta.css">
+</head>
+
+<body>
+
+<!-- corazones -->
+<div class="hearts"></div>
+
+<div class="paper">
+
+<h1>La gran pregunta</h1>
+
+<p>
+Después de analizar los hechos, recopilar datos  
+y comprobar la química innegable entre nosotros…  
+<br><br>
+Así que ahora,  
+con el corazón en la mano  
+y una sonrisa nerviosa:
+</p>
+
+<h2>¿Quieres ser mi<br><span>San Valentín?</span></h2>
+
+<p>Elige tu respuesta:</p>
+
+<div class="buttons">
+    <button id="btnSi" onclick="respuestaSi()">OBVIO, CLARO QUE SI 💖</button>
+    <button id="btnNo" onclick="respuestaNo()">MMM… NO 😅</button>
+</div>
+
+<p id="mensajeNo">
+Eso no es una opción válida 😌💖<br>
+Inténtalo de nuevo…
+</p>
+
+</div>
+
+<script>
+function respuestaSi(){
+    window.location.href = "confirmado.html";
+}
+
+function respuestaNo(){
+    const msg = document.getElementById("mensajeNo");
+    msg.style.display = "block";
+}
+</script>
+
+<!-- script corazones -->
+<script>
+const heartsContainer = document.querySelector(".hearts");
+
+function crearCorazon(){
+const heart = document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML = "❤";
+
+heart.style.left = Math.random()*100 + "vw";
+heart.style.animationDuration = (6 + Math.random()*5) + "s";
+heart.style.fontSize = (14 + Math.random()*18) + "px";
+
+heartsContainer.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+}
+
+setInterval(crearCorazon,500);
+</script>
+
+</body>
+</html>
